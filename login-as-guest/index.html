@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Login Page with Guest User option</title>
+
+</head>
+<body>
+    
+    <article id="login-page">
+        <h1>Normal User Login</h1>
+<div id="form">
+    <div class="full-name">
+    
+                <div id="fname-1">
+                    <Label> Firstname</Label> <input type="text" id="fname">
+                    <p><span id="err1">Please Enter this mandatory field</span></p>
+                </div>
+    
+                <div id="lname-1">
+                    <Label> Lastname</Label> <input type="text" id="lname">
+                    <p><span id="err2">Please Enter this mandatory field</span></p>
+                </div>
+    </div>
+    <div id="email">
+        <label>Email</label> <input type="email" id="mail">
+        <p><span id="err3">Email is not valid </span></p>
+    </div>
+    <div id="password">
+        <label>Password</label> <input type="password">
+    </div>
+
+    <span> <button id="user-login">login</button></span>
+    <span> <button id="guest-login">Guest User</button></span>
+</div>
+
+
+    </article>
+
+    <article id="guest-user-login">
+        <h1>Guest User Login</h1>
+        <div id="form2">
+            <div class="full-name">
+            
+                        <div id="">
+                            <Label> Firstname</Label> <input type="text" class="fname-2">
+                           
+                        </div>
+            
+                        <div id="fname">
+                            <Label> Lastname</Label> <input type="text" class="lname-2">
+                        </div>
+            </div>
+            
+            <span> <button id="login">login</button></span>
+        </div>
+        
+        
+        </article>
+
+        <main id="app-page" style="display: none;">
+
+            <article id="welcome-page">
+    
+    
+                
+                <h1>Wlcome to Application</h1>
+    
+            </article>
+    
+    
+    
+        </main>
+
+<script src="script.js"></script>
+</body>
+</html>
