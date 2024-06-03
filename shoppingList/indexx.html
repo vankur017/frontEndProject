@@ -23,7 +23,7 @@
         <h1 style="color:wheat;"> Login to Add Shopping List Items</h1>
       
           <div id="Name">
-           <span>Name</span> <input type="text" id="fanme"><br/>
+           <span>Name</span> <input type="text" id="name"><br/>
            <span>Contact No</span> <input type="tel" id="telephone">
           </div>
           
@@ -41,7 +41,7 @@
         <div class="container">
           <header>
           <img src="./images/note.png" alt="">
-          <h1>Shopping List</h1></header>
+           <h1><span id="nme"></span>  Shopping List</h1></header>
           <form id="item-form">
               <div class="form-control">
                   <input type="text"
@@ -64,12 +64,7 @@
               />
             </div>
             <ul id="item-list" class="items">
-              <li>
-                Apples
-                <button class="remove-item btn-link text-red">
-                  <i class="fa-solid fa-xmark"></i>
-                </button>
-            </li>
+           
             </ul>
             <button id="clear" class="btn-clear">Clear All</button>
           </div>
