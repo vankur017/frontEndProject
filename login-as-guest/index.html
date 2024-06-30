@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <title>Login Page with Guest User option</title>
+    
 
 </head>
 <body>
@@ -29,7 +30,8 @@
         <p><span id="err3">Email is not valid </span></p>
     </div>
     <div id="password">
-        <label>Password</label> <input type="password">
+        <label>Password</label> <input type="password" id="pass">
+        <p><span id="err4">Password is not valid </span></p>
     </div>
 
     <span> <button id="user-login">login</button></span>
@@ -39,40 +41,8 @@
 
     </article>
 
-    <article id="guest-user-login">
-        <h1>Guest User Login</h1>
-        <div id="form2">
-            <div class="full-name">
-            
-                        <div id="">
-                            <Label> Firstname</Label> <input type="text" class="fname-2">
-                           
-                        </div>
-            
-                        <div id="fname">
-                            <Label> Lastname</Label> <input type="text" class="lname-2">
-                        </div>
-            </div>
-            
-            <span> <button id="login">login</button></span>
-        </div>
-        
-        
-        </article>
+  
 
-        <main id="app-page" style="display: none;">
-
-            <article id="welcome-page">
-    
-    
-                
-                <h1>Wlcome to Application</h1>
-    
-            </article>
-    
-    
-    
-        </main>
 
 <script src="script.js"></script>
 </body>

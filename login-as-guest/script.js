@@ -1,19 +1,23 @@
 document.addEventListener('DOMContentLoaded',function(){
 
-const new_screen = document.getElementById('guest-user-login');
+
 
 const old_screen = document.getElementById('login-page');
 
 const guest_button = document.getElementById('guest-login');
 
+
 const login_button  = document.getElementById('user-login');
+
+const pass = document.getElementById('pass');
+
 
 const loginpage = document.getElementById('welcome-page');
 
 
 
 
-  function testMail(){
+  function testMailandPassword(){
     const regex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/
 
     const email = document.getElementById('mail')
@@ -30,13 +34,27 @@ const loginpage = document.getElementById('welcome-page');
         } else {
 
             errorElement.style.display = "block";
-            return false
+           
 
         }
     });
 
+    const regexPass =  /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@.#$!%*?&^])[A-Za-z\d@.#$!%*?&]{8,15}$/;
+    const errorElement_2 = document.getElementById('err4')
+
+    pass.addEventListener('input', function(event){
+        const passVal = event.target.value;
+        if(regexPass.test(passVal)) {
+            errorElement_2.style.display ='none'
+        }
+        else{
+            errorElement_2.style.display = 'block'
+           
+        }
+    })
+
 }
-testMail();
+testMailandPassword();
 
 let checkfirstName = function(){
     const checkFname = document.getElementById("fname");
@@ -63,27 +81,30 @@ let checklastName = function(){
 }
 
 
-login_button.addEventListener('click', function(){
-   let x = checkfirstName();
-   let y=  checklastName();
-   
-   
-   if (x && y) {
-    window.loginpage.style.display = 'block';
+function displayNewScreen(){
+
+                login_button.addEventListener('click', function () {
+                    let isFirstNameValid = checkfirstName();
+                    let isLastNameValid = checklastName();
     
-    old_screen.remove();
-} else {
-    // Handle the case where first name or last name checks fail
-    console.error("First name or last name check failed");
-}
-})
+                    if (isFirstNameValid && isLastNameValid) {
+                        loginpage.style.display = 'block';
+                        // old_screen.style.display = 'none';
+                        old_screen.remove();
+                        window.location.href = "c.html";
+                    }
+                });
+            }  
 
-
+            displayNewScreen()
 guest_button.addEventListener('click', function(){
 
     old_screen.remove();
-
-    new_screen.style.display='block'
+   
+    window.location.href='guesUSer.html'
 
 })
-})
+
+
+
+})    

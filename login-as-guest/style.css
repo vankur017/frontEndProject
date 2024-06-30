@@ -50,7 +50,7 @@ label {
 
 input[type="text"], input[type="email"], input[type="password"] {
     width: 100%;
-    padding: 10px;
+    padding: 6px 10px;
     border: none;
     border-radius: 4px;
     margin-bottom: 10px;
@@ -59,7 +59,7 @@ input[type="text"], input[type="email"], input[type="password"] {
 input[type="text"]::placeholder, input[type="email"]::placeholder, input[type="password"]::placeholder {
     color: #bbb;
 }
-#err3{
+#err3,#err4{
     display: none;
     font-size: 0.5em;
     padding-bottom: 20px
@@ -71,6 +71,7 @@ button {
     cursor: pointer;
     margin: 5px 0;
     min-width: 350px;
+   
 }
 
 #user-login {
@@ -107,7 +108,7 @@ span#err1, span#err2 {
     display: none;
 }
 #guest-user-login{
-    margin: 10px 20px;
+    margin: 13px 20px;
     border: 1px solid black;
     background-color: rgb(189, 136, 72);
     display: none;
